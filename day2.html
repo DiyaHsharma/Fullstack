@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume</title>
+    <script>
+        function handleSubmit(event) {
+            // event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            console.log(data);
+        }
+    </script>
+</head>
+<body>
+    <form action="dashboard.html" method="post" onsubmit="handleSubmit(event)">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Diyaaa" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required placeholder="abc@gmail.com">
+        <br>
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="pass" required>
+        <br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone">
+        <br>
+        <p><b>Gender</b></p>
+        <label for="gender-female">Female</label>
+        <input type="radio" id="gender-female" name="gender" value="female">
+        <br>
+        <label for="gender-male">Male</label>
+        <input type="radio" id="gender-male" name="gender" value="male">
+        <br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
+
+    

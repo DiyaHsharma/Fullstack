@@ -1,6 +1,14 @@
 <!DOCTYPE html>
     <head>
         <title>Resume</title>
+        <script>
+            function handleSubmit(event){
+                event.preventDefault();
+                const formData= new FormData(event.target);
+                const data= Object.fromEntries(formData);
+                console.log(data);
+            }
+        </script>
     </head>
 <body>
 
@@ -143,7 +151,34 @@
 </table>
 
 <h1>Register Form</h1>
-<form>
+<!-- <form>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" placeholder="Diyaaa" required>
+    <br>
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required placeholder="abc@gmail.com">
+    <br>
+    <label for="pass">Password:</label>
+    <input type="password" id="pass" name="pass" required>
+    <br>
+    <label for="phone">Phone Number:</label>
+    <input type="long" id="phone" name="phone">
+    <br>
+    <p><b>Gender</b></p>
+    <label for="gender">Female</label>
+    <input type="radio" id="girl" name="gender">
+    <br>
+    <label for="gender">Male</label>
+    <input type="radio" id="boy" name="gender">
+    <br>
+    <label for="submit">Submit</label>
+    <input type="submit" name="submit" >
+    <br>
+    <label for="submit">Reset</label>
+    <input type="submit" name="submit">
+</form> -->
+
+<form action="dashboard.html" method="post" onsubmit="handleSubmit(event)">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" placeholder="Diyaaa" required>
     <br>
@@ -169,5 +204,6 @@
     <label for="submit">Reset</label>
     <input type="submit" name="submit">
 </form>
+
 </body>
 
