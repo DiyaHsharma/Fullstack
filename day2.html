@@ -4,7 +4,7 @@
     <title>Resume</title>
     <script>
         function handleSubmit(event) {
-            // event.preventDefault();
+            event.preventDefault();
             const formData = new FormData(event.target);
             const data = Object.fromEntries(formData);
             console.log(data);
@@ -12,18 +12,19 @@
     </script>
 </head>
 <body>
-    <form action="dashboard.html" method="post" onsubmit="handleSubmit(event)">
+    <!-- <form action="dashboard.html" method="post" onsubmit="handleSubmit(event)"> -->
+        <form method="post" onsubmit="handleSubmit(event)">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" placeholder="Diyaaa" required>
+        <input type="text" id="username" name="username" placeholder="Diyaaa" required value="diyaaa">
         <br>
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email" required placeholder="abc@gmail.com">
+        <input type="text" id="email" name="email" required placeholder="abc@gmail.com" value="ab@gmail.com">
         <br>
         <label for="pass">Password:</label>
-        <input type="password" id="pass" name="pass" required>
+        <input type="password" id="pass" name="pass" required value="123">
         <br>
         <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone">
+        <input type="tel" id="phone" name="phone" value="123-567">
         <br>
         <p><b>Gender</b></p>
         <label for="gender-female">Female</label>
@@ -31,6 +32,18 @@
         <br>
         <label for="gender-male">Male</label>
         <input type="radio" id="gender-male" name="gender" value="male">
+        <br>
+        <select name="state" id="state" multiple>
+            <option value="" disabled selected>Select your state</option>
+            <option value="andhra">Andhra Pradesh</option>
+            <option value="delhi" disabled>Delhi</option>
+            <option value="agra">Agra</option>
+            <option value="kerala">Kerala</option>
+            <option value="gujarat">Gujarat</option>
+        </select>
+        <br>
+        <label for="file-upload">Upload File</label>
+        <input type="file" id="file-upload" name="file-upload" accept=".jpg">
         <br>
         <input type="submit" value="Submit">
         <input type="reset" value="Reset">
