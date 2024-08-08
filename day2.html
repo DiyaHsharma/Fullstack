@@ -4,7 +4,7 @@
     <title>Resume</title>
     <script>
         function handleSubmit(event) {
-            // event.preventDefault();
+            event.preventDefault();
             const formData = new FormData(event.target);
             const data = Object.fromEntries(formData);
             console.log(data);
@@ -12,19 +12,21 @@
     </script>
 </head>
 <body>
-    <form action="dashboard.html" method="post" onsubmit="handleSubmit(event)">
+    <!-- <form action="dashboard.html" method="post" onsubmit="handleSubmit(event)"> -->
+        <form  method="post" onsubmit="handleSubmit(event)">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" placeholder="Diyaaa" required>
+        <input type="text" id="username" name="username" placeholder="Diyaaa" required value="name">
         <br>
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email" required placeholder="abc@gmail.com">
+        <input type="text" id="email" name="email" required placeholder="abc@gmail.com" value="abc@gmail.com">
         <br>
         <label for="pass">Password:</label>
-        <input type="password" id="pass" name="pass" required>
+        <input type="password" id="pass" name="pass" required value="123">
         <br>
         <label for="phone">Phone Number:</label>
-        <input type="tel" id="phone" name="phone">
+        <input type="tel" id="phone" name="phone" value="1234-5678">
         <br>
+        <input type="hidden" id="hide" name="Hidden" value="3487">
         <p><b>Gender</b></p>
         <label for="gender-female">Female</label>
         <input type="radio" id="gender-female" name="gender" value="female">
