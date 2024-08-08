@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData);
+            console.log(data);
+        }
+    </script>
+</head>
+<body>
+        <form action="new.html" method="post" onsubmit="handleSubmit(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="username" name="username" placeholder="Diyaaa" required value="diyaaa">
+            <br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required placeholder="abc@gmail.com" value="ab@gmail.com">
+            <br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" value="123-567">
+            <br>
+            <p><b>Purpose:</b></p>
+            <label for="purpose">Personal</label>
+            <input type="radio" id="personal" name="purpose" value="female">
+            <br>
+            <label for="purpose">Work</label>
+            <input type="radio" id="work" name="purpose" value="male">
+        </form>
+        <script>
+            function changeLocation(){
+                window.location.href='new.html'
+            }
+        </script>
+        <button id="goBack" onclick="changeLocation()">Go Back</button>
+</body>
+</html>
