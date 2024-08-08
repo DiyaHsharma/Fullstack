@@ -1,14 +1,6 @@
 <!DOCTYPE html>
     <head>
         <title>Resume</title>
-        <script>
-            function handleSubmit(event){
-                event.preventDefault();
-                const formData= new FormData(event.target);
-                const data= Object.fromEntries(formData);
-                console.log(data);
-            }
-        </script>
     </head>
 <body>
 
@@ -21,8 +13,8 @@
 <header>
     <h1>Diyaaa Sharma</h1>
     <h3><i>I</i> am a sophomore at GLA Mathura and I like to perform good at my <strong>studies</strong> <br> Currently I am in my third year of Graduation </h3>
-    <b>T</b><sub>e</sub><u><b>X</b></u><sup>t</sup> <br>
-    <b>F</b>or<sup>m</sup><s>at</s><sup>t</sup><b><u>in</u></b>g
+    <!-- <b>T</b><sub>e</sub><u><b>X</b></u><sup>t</sup> <br>
+    <b>F</b>or<sup>m</sup><s>at</s><sup>t</sup><b><u>in</u></b>g -->
     I am usually an ambivert who socialises only around her friends but lately I've learned that friends don't stay long and there are often situations where you find yourself alone. <br>
 
     <img src="Snapchat-758478765.jpg" alt="Meee" height="95px">
@@ -60,11 +52,11 @@
             <td>7.4</td>
         </tr>
     </table>
-    <table>
+    <!-- <table>
         <tr>GLA Mathura</tr>
         <tr><a href="https://glauniversity.in:8085/Main/Course"> GLA Mathura</a></tr>
         <tr> Third year</tr>
-    </table>
+    </table> -->
 
     <!-- emmet -->
 
@@ -102,14 +94,15 @@
     </h2>
 </footer> -->
 
-
+<p><b>My contact details:</b></p>
     <a href="mailto:diyaabhisharma@gmail.com">My email</a> <br>
     <a href="tel:8439802670">91 84398 02670</a> <br>
-    <img src="C:\Users\diyas\Pictures\Saved Pictures\vogue-aesthetic.jpg" alt="sample" height="95px">
+    <br>
+    <a href="contact.html">Reach out to me</a>
 
 </div>
 
-<table border="1" cellspacing="0" cellpadding="8">
+<!-- <table border="1" cellspacing="0" cellpadding="8">
     <tr>
         <th colspan="6">Time Table</th>
     </tr>
@@ -150,7 +143,7 @@
     
 </table>
 
-<h1>Register Form</h1>
+<h1>Register Form</h1> -->
 <!-- <form>
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" placeholder="Diyaaa" required>
@@ -177,33 +170,5 @@
     <label for="submit">Reset</label>
     <input type="submit" name="submit">
 </form> -->
-
-<form action="dashboard.html" method="post" onsubmit="handleSubmit(event)">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" placeholder="Diyaaa" required>
-    <br>
-    <label for="email">Email:</label>
-    <input type="text" id="email" name="email" required placeholder="abc@gmail.com">
-    <br>
-    <label for="pass">Password:</label>
-    <input type="password" id="pass" name="pass" required>
-    <br>
-    <label for="phone">Phone Number:</label>
-    <input type="long" id="phone" name="phone">
-    <br>
-    <p><b>Gender</b></p>
-    <label for="gender">Female</label>
-    <input type="radio" id="girl" name="gender">
-    <br>
-    <label for="gender">Male</label>
-    <input type="radio" id="boy" name="gender">
-    <br>
-    <label for="submit">Submit</label>
-    <input type="submit" name="submit" >
-    <br>
-    <label for="submit">Reset</label>
-    <input type="submit" name="submit">
-</form>
-
 </body>
 
